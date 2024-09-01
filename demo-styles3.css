@@ -5,36 +5,33 @@ html, body {
     height: 100%;
     font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
     color: #244376;
-}
-
-/* Full-screen model container */
-#model-container {
+  }
+  
+  /* Full-screen model container */
+  #model-container {
     position: relative;
     width: 100%;
     height: 100%;
-}
-
-/* Model Viewer takes up full screen */
-model-viewer {
-    position: absolute;
-    top: 0;
-    left: 0;
+  }
+  
+  /* Model Viewer takes up full screen */
+  model-viewer {
     width: 100%;
     height: 100%;
     background-color: #ebebeb;
     --poster-color: #ffffff00;
-}
-
-/* Loader styles */
-/* From Uiverse.io by Shoh2008 */ 
+  }
+  
+  /* Loader styles */
+  /* From Uiverse.io by Shoh2008 */ 
 .loader {
     display: block;
     width: 84px;
     height: 84px;
     position: relative;
-}
-
-.loader:before, .loader:after {
+  }
+  
+  .loader:before , .loader:after {
     content: "";
     position: absolute;
     left: 50%;
@@ -43,19 +40,20 @@ model-viewer {
     height: 64px;
     border-radius: 50%;
     background: #FFF;
-    transform: translate(-50%, -100%) scale(0);
+    transform: translate(-50% , -100%)  scale(0);
     animation: push_401 2s infinite linear;
-}
-
-.loader:after {
+  }
+  
+  .loader:after {
     animation-delay: 1s;
-}
-
-@keyframes push_401 {
-    0%, 50% {
-        transform: translate(-50%, 0%) scale(1);
+  }
+  
+  @keyframes push_401 {
+    0% , 50% {
+      transform: translate(-50% , 0%)  scale(1)
     }
+  
     100% {
-        transform: translate(-50%, -100%) scale(0);
+      transform: translate(-50%, -100%) scale(0)
     }
-}
+  }
