@@ -1,28 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <title>3D Model Full Screen</title>
+    <title>&lt;model-viewer&gt; template</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="demo-styles3.css">
-  </head> 
-<body>
-  <div id="model-container">
-    <model-viewer src="https://cdn.glitch.global/4e3ff40e-756b-4a43-acb2-cb2b19e923eb/Cole_Armchair_Maisons_Du_Monde.glb?v=1725200487411"
-                  ios-src="https://cdn.glitch.global/4e3ff40e-756b-4a43-acb2-cb2b19e923eb/Cole_Armchair_Maisons_Du_Monde.usdc?v=1725200498915"
-                  poster=https://cdn.glitch.global/4e3ff40e-756b-4a43-acb2-cb2b19e923eb/da00f8ac-9c45-41bf-a11c-5a87a148a983.image.png?v=1725200625370"
-                  alt="sofa"
-                  shadow-intensity="1"
-                  camera-controls
-                  auto-rotate 
-                  ar>
-    </model-viewer>
-    <!-- Loader -->
-    <div class="loader"></div>
-  </div>
-  
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-</body>
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="chairrr2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.png" shadow-intensity="1" environment-image="3f9c0756-376b-439c-9414-7a5d88720e96#.hdr" exposure="1" auto-rotate camera-orbit="-37.85deg 74.04deg 2.472m" field-of-view="30deg">
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  </body>
 </html>
